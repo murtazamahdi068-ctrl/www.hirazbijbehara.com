@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HIRAZ FOODS — Big Cravings. Bold Flavours. Good Times. | Bijbehara</title>
+<meta name="description" content="Hiraz Foods, Zirpara Bijbehara — Pizza, Burgers, Hot & Crispy Chicken, Mocktails, Rolls, Coffee, Momos, Biryani. ₹200–₹400 per person. 4.2 ★ 407 Google Reviews.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{
+--black:#0D0B09; --char:#141110; --char2:#1C1714; --line:rgba(255,246,233,.12);
+--cream:#FFF6E9; --cream2:#F5EBD8; --cream-dim:#CFC0A9;
+--red:#D81E2C; --red2:#A80F1C; --orange:#FF6A1A; --gold:#D9A441; --gold2:#F2CE7E;
+--mut:rgba(255,246,233,.68); --mut-d:#6B5F52;
+--r:22px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--cream);font-family:'Manrope',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+::selection{background:var(--red);color:#fff}
+ Anton,.anton{font-family:'Anton',sans-serif}
+.serif{font-family:'Fraunces',serif}
+/* grain */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+/* loader */
+#loader{position:fixed;inset:0;background:#0D0B09;z-index:10000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;transition:opacity .7s ease,visibility .7s}
+#loader.hide{opacity:0;visibility:hidden}
+#loader .l-logo{font-family:'Anton';font-size:clamp(42px,8vw,84px);letter-spacing:.02em;line-height:.9;text-align:center}
+#loader .l-logo span{color:var(--red)}
+#loader .l-bar{width:210px;height:2px;background:rgba(255,255,255,.12);overflow:hidden;border-radius:99px}
+#loader .l-bar i{display:block;height:100%;width:40%;background:var(--red);animation:load 1.1s infinite ease-in-out}
+@keyframes load{0%{transform:translateX(-100%)}100%{transform:translateX(350%)}}
+#loader p{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--cream-dim)}
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:16px 28px;transition:.35s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(13,11,9,.86);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--line);padding:12px 28px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{width:44px;height:44px;background:var(--red);border-radius:13px;display:grid;place-items:center;font-family:'Anton';font-size:22px;color:#fff;box-shadow:0 8px 24px rgba(216,30,44,.4);position:relative;overflow:hidden}
+.brand-mark::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.35),transparent 55%)}
+.brand-txt{line-height:1}
+.brand-txt b{font-family:'Anton';font-size:22px;letter-spacing:.06em;display:block}
+.brand-txt small{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold2)}
+.nav-links{display:flex;gap:30px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.nav-links a{opacity:.72;position:relative;padding:6px 0;transition:.25s}
+.nav-links a.active,.nav-links a:hover{opacity:1;color:#fff}
+.nav-links a.active::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--red);border-radius:2px}
+.nav-cta{display:flex;gap:10px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 24px;border-radius:100px;font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;border:1px solid transparent;cursor:pointer;transition:.28s;white-space:nowrap}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 12px 32px rgba(216,30,44,.35)}
+.btn-red:hover{background:#ef2a38;transform:translateY(-2px);box-shadow:0 18px 40px rgba(216,30,44,.45)}
+.btn-ghost{border-color:rgba(255,246,233,.22);color:var(--cream);background:rgba(255,255,255,.04)}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1);transform:translateY(-2px)}
+.btn-cream{background:var(--cream);color:#111}
+.btn-cream:hover{background:#fff;transform:translateY(-2px)}
+.btn-dark{background:#111;color:var(--cream)}
+.hamb{display:none;width:46px;height:46px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:#fff;font-size:19px;cursor:pointer}
+/* mobile drawer */
+#mDrawer{position:fixed;inset:0;z-index:950;background:rgba(13,11,9,.98);backdrop-filter:blur(20px);display:flex;flex-direction:column;padding:24px;transform:translateX(100%);transition:.45s cubic-bezier(.7,0,.2,1)}
+#mDrawer.open{transform:none}
+#mDrawer a.mlink{font-family:'Anton';font-size:42px;line-height:1.05;letter-spacing:.02em;padding:10px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+#mDrawer a.mlink span{font-family:'Manrope';font-size:12px;letter-spacing:.2em;color:var(--gold2)}
+/* hero */
+.hero{min-height:100svh;position:relative;display:flex;align-items:flex-end;overflow:hidden;padding:130px 28px 0}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:heroZoom 18s ease-in-out infinite alternate}
+@keyframes heroZoom{to{transform:scale(1.18) translateY(-18px)}}
+.hero-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(90% 70% at 30% 40%,transparent 0%,rgba(13,11,9,.55) 55%,#0D0B09 100%),linear-gradient(180deg,rgba(13,11,9,.55) 0%,rgba(13,11,9,.25) 35%,rgba(13,11,9,.92) 88%),linear-gradient(90deg,rgba(13,11,9,.85) 0%,rgba(13,11,9,.15) 60%)}
+.hero-red{position:absolute;top:0;right:12%;width:220px;height:100%;background:linear-gradient(180deg,var(--red) 0%,transparent 100%);opacity:.22;transform:skewX(-12deg);pointer-events:none}
+.hero-inner{position:relative;z-index:2;width:100%;max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:end;padding-bottom:34px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.07);backdrop-filter:blur(10px);padding:9px 16px;border-radius:100px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:800}
+.eyebrow .dot{width:8px;height:8px;background:#3ddc74;border-radius:50%;box-shadow:0 0 0 6px rgba(61,220,116,.18);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 10px rgba(61,220,116,.05)}}
+.hero h1{font-family:'Anton';font-size:clamp(54px,9.2vw,132px);line-height:.88;letter-spacing:.01em;margin:20px 0 16px;text-transform:uppercase}
+.hero h1 .out{color:transparent;-webkit-text-stroke:2px var(--cream)}
+.hero h1 .red{color:var(--red);text-shadow:0 10px 60px rgba(216,30,44,.5)}
+.hero h1 .it{font-family:'Fraunces';font-style:italic;font-weight:400;text-transform:none;color:var(--gold2);letter-spacing:-.02em}
+.hero-sub{font-size:clamp(15px,1.6vw,19px);color:var(--mut);max-width:560px;line-height:1.6}
+.hero-sub b{color:var(--cream)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:6px}
+.meta-pill{display:flex;align-items:center;gap:10px;background:rgba(255,246,233,.08);border:1px solid var(--line);border-radius:16px;padding:12px 16px;backdrop-filter:blur(12px)}
+.meta-pill strong{font-family:'Anton';font-size:22px;letter-spacing:.03em}
+.meta-pill small{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.7;line-height:1.4}
+.stars{color:var(--gold2);font-size:13px;letter-spacing:2px}
+/* hero card */
+.hero-card{background:var(--cream);color:#131010;border-radius:26px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5);transform:rotate(1.5deg);border:1px solid rgba(255,255,255,.2)}
+.hero-card .hc-img{height:300px;overflow:hidden;position:relative}
+.hero-card .hc-img img{width:100%;height:100%;object-fit:cover}
+.hero-card .hc-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.45))}
+.hc-badge{position:absolute;top:14px;left:14px;z-index:2;background:#111;color:#fff;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:9px 14px;border-radius:100px;display:flex;gap:8px;align-items:center}
+.hc-body{padding:20px 20px 22px}
+.hc-body h3{font-family:'Anton';font-size:28px;letter-spacing:.02em}
+.hc-body p{color:#6B5F52;font-size:14px;margin:6px 0 14px;line-height:1.6}
+.hc-row{display:flex;gap:10px}
+.hc-row .btn{flex:1;padding:13px 10px}
+.scroll-hint{position:relative;z-index:2;max-width:1280px;margin:0 auto;width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 0 90px;color:var(--cream-dim);font-size:11px;letter-spacing:.28em;text-transform:uppercase}
+.scroll-hint .line{height:1px;flex:1;margin:0 18px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
+/* marquee */
+.marquee{background:var(--red);color:#fff;overflow:hidden;white-space:nowrap;padding:14px 0;border-top:1px solid #000;border-bottom:1px solid #000;transform:rotate(-1deg) scale(1.02);position:relative;z-index:3}
+.marquee-track{display:inline-flex;gap:0;animation:mq 22s linear infinite;font-family:'Anton';font-size:20px;letter-spacing:.12em}
+.marquee-track span{padding:0 22px;display:inline-flex;align-items:center;gap:22px}
+.marquee-track span::after{content:"✦";opacity:.7}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* sections common */
+section{position:relative}
+.wrap{max-width:1280px;margin:0 auto;padding:0 28px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:34px;flex-wrap:wrap}
+.kicker{font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:800;color:var(--red);display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.kicker::before{content:"";width:28px;height:2px;background:var(--red);display:inline-block;border-radius:2px}
+.dark .kicker{color:var(--gold2)} .dark .kicker::before{background:var(--gold2)}
+h2.title{font-family:'Anton';font-size:clamp(36px,5.2vw,68px);line-height:.92;text-transform:uppercase;letter-spacing:.01em}
+h2.title em{font-family:'Fraunces';font-style:italic;font-weight:400;text-transform:none;letter-spacing:-.02em}
+.light-sec{background:var(--cream);color:#151110}
+.light-sec .kicker{color:var(--red)} .light-sec .kicker::before{background:var(--red)}
+/* categories */
+#categories{padding:86px 0 70px;background:linear-gradient(180deg,#0D0B09 0%,#161110 100%)}
+.cat-scroll{display:flex;gap:18px;overflow-x:auto;padding:6px 28px 18px;scroll-snap-type:x mandatory;scrollbar-width:none}
+.cat-scroll::-webkit-scrollbar{display:none}
+.cat-card{min-width:300px;max-width:300px;height:460px;border-radius:24px;overflow:hidden;position:relative;scroll-snap-align:start;cursor:pointer;border:1px solid var(--line);transition:.4s}
+.cat-card:hover{transform:translateY(-10px) scale(1.01);border-color:rgba(255,255,255,.3);box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.cat-card img{width:100%;height:100%;object-fit:cover;transition:1s}
+.cat-card:hover img{transform:scale(1.12)}
+.cat-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 30%,rgba(0,0,0,.85) 100%)}
+.cat-top{position:absolute;top:16px;left:16px;right:16px;z-index:2;display:flex;justify-content:space-between;align-items:center}
+.cat-num{font-family:'Anton';font-size:14px;letter-spacing:.15em;background:rgba(255,255,255,.14);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2);padding:8px 12px;border-radius:100px}
+.cat-arrow{width:44px;height:44px;border-radius:50%;background:var(--cream);color:#111;display:grid;place-items:center;font-size:18px;transition:.3s}
+.cat-card:hover .cat-arrow{background:var(--red);color:#fff;transform:rotate(-45deg)}
+.cat-bot{position:absolute;bottom:0;left:0;right:0;z-index:2;padding:22px}
+.cat-bot h3{font-family:'Anton';font-size:34px;letter-spacing:.03em}
+.cat-bot p{font-size:13px;opacity:.8;margin:6px 0 10px}
+.cat-tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--gold2)}
+/* story */
+#about{background:var(--cream);color:#171210;padding:96px 0;overflow:hidden}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.about-imgs{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.about-imgs .a1{grid-column:1/-1;height:340px;border-radius:22px;object-fit:cover;width:100%}
+.about-imgs .a2,.about-imgs .a3{height:220px;border-radius:18px;object-fit:cover;width:100%}
+.about-badge{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%) rotate(-8deg);background:#111;color:var(--cream);padding:16px 20px;border-radius:18px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.15)}
+.about-badge b{font-family:'Anton';font-size:28px;display:block;line-height:1} .about-badge small{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2)}
+.about-copy h2{color:#111}
+.about-copy .lead{font-family:'Fraunces';font-style:italic;font-size:clamp(22px,2.6vw,30px);line-height:1.25;margin:14px 0;color:#2A2220}
+.about-copy p.desc{color:#6B5F52;line-height:1.75;font-size:15.5px;max-width:520px}
+.fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:26px 0}
+.fact{background:#fff;border:1px solid #E9DCC5;border-radius:16px;padding:16px;display:flex;gap:12px;align-items:center;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.fact i{width:42px;height:42px;border-radius:12px;background:#111;color:var(--gold2);display:grid;place-items:center;flex-shrink:0}
+.fact b{display:block;font-size:14px} .fact span{font-size:12px;color:#8A7D6D}
+/* signature */
+#signature{background:#0D0B09;padding:98px 0;overflow:hidden}
+.sig-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-top:10px}
+.sig-list{border-top:1px solid var(--line)}
+.sig-item{padding:20px 10px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:18px;cursor:pointer;transition:.3s;border-radius:12px}
+.sig-item:hover,.sig-item.active{background:rgba(255,246,233,.06);padding-left:18px}
+.sig-item .n{font-family:'Anton';opacity:.35;font-size:15px;min-width:32px}
+.sig-item h4{font-family:'Anton';font-size:clamp(22px,3vw,34px);letter-spacing:.02em;text-transform:uppercase;flex:1}
+.sig-item.active h4{color:var(--gold2)}
+.sig-item .go{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:.3s}
+.sig-item.active .go{background:var(--red);border-color:var(--red)}
+.sig-view{position:sticky;top:100px;border-radius:26px;overflow:hidden;background:var(--char2);border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.sig-view .sv-img{height:440px;overflow:hidden;position:relative}
+.sig-view .sv-img img{width:100%;height:100%;object-fit:cover;transition:.8s}
+.sig-view .sv-body{padding:24px;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.sig-view .sv-body h3{font-family:'Anton';font-size:28px}
+.sig-view .sv-body p{color:var(--mut);font-size:14px;margin-top:6px;line-height:1.6}
+/* menu */
+#menu{background:var(--cream);color:#151110;padding:96px 0}
+.menu-topbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin:22px 0}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.fbtn{padding:11px 18px;border-radius:100px;border:1px solid #D9CBB2;background:#fff;font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:.25s;color:#3A312B}
+.fbtn.active,.fbtn:hover{background:#111;color:#fff;border-color:#111}
+.search{position:relative;min-width:260px;flex:1;max-width:340px}
+.search input{width:100%;padding:13px 16px 13px 44px;border-radius:100px;border:1px solid #D9CBB2;background:#fff;outline:none;font-family:inherit;font-weight:600}
+.search i{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:#8A7D6D}
+.menu-note{background:#111;color:var(--cream);border-radius:16px;padding:14px 18px;font-size:13px;display:flex;gap:12px;align-items:center;margin-bottom:22px;line-height:1.6}
+.menu-note i{color:var(--gold2)}
+#menuGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.mcard{background:#fff;border-radius:20px;overflow:hidden;border:1px solid #EADFC8;transition:.35s;display:flex;flex-direction:column;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.mcard:hover{transform:translateY(-8px);box-shadow:0 26px 60px rgba(0,0,0,.14)}
+.mcard .mi{height:210px;overflow:hidden;position:relative}
+.mcard .mi img{width:100%;height:100%;object-fit:cover;transition:.8s}
+.mcard:hover .mi img{transform:scale(1.1)}
+.mcard .mcat{position:absolute;top:12px;left:12px;background:rgba(13,11,9,.85);backdrop-filter:blur(8px);color:#fff;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;padding:7px 12px;border-radius:100px}
+.mcard .madd{position:absolute;bottom:12px;right:12px;width:44px;height:44px;border-radius:50%;background:var(--red);color:#fff;border:none;font-size:18px;cursor:pointer;transition:.25s;box-shadow:0 10px 24px rgba(216,30,44,.4)}
+.mcard .madd:hover{transform:scale(1.1) rotate(90deg)}
+.mcard .mb{padding:18px}
+.mcard .mb h4{font-family:'Anton';font-size:20px;letter-spacing:.02em;line-height:1.1}
+.mcard .mb p{font-size:13.5px;color:#7A6E5F;margin:8px 0 12px;line-height:1.6;min-height:42px}
+.mcard .mfoot{display:flex;justify-content:space-between;align-items:center;border-top:1px dashed #EADFC8;padding-top:12px}
+.mcard .mfoot span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:#A08C72}
+.vdot{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:800}
+.vdot::before{content:"";width:10px;height:10px;border-radius:3px;border:2px solid currentColor;display:inline-block}
+.veg{color:#1a8a3a}.nonveg{color:#B42318}
+/* cravings */
+#cravings{background:radial-gradient(80% 100% at 50% 0%,#261313 0%,#0D0B09 60%);padding:96px 0}
+.crave-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-top:8px}
+.crave-feat{position:relative;border-radius:26px;overflow:hidden;min-height:520px;display:flex;align-items:flex-end;border:1px solid var(--line)}
+.crave-feat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.crave-feat::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 20%,rgba(0,0,0,.88) 100%)}
+.crave-feat .cf-in{position:relative;z-index:2;padding:30px;width:100%}
+.crave-feat .cf-in h3{font-family:'Anton';font-size:clamp(32px,4vw,54px);line-height:.9}
+.crave-side{display:grid;gap:18px}
+.crave-mini{border-radius:22px;overflow:hidden;position:relative;min-height:251px;display:flex;align-items:flex-end;border:1px solid var(--line)}
+.crave-mini img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.8s}
+.crave-mini:hover img{transform:scale(1.08)}
+.crave-mini::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 10%,rgba(0,0,0,.85))}
+.crave-mini div{position:relative;z-index:2;padding:22px;width:100%;display:flex;justify-content:space-between;align-items:end;gap:12px}
+.crave-mini h4{font-family:'Anton';font-size:24px}
+/* insta */
+#instagram{background:#FFFDF7;color:#151110;padding:96px 0}
+.insta-head{background:#111;color:var(--cream);border-radius:24px;padding:26px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;margin-bottom:20px;position:relative;overflow:hidden}
+.insta-head::after{content:"";position:absolute;right:-40px;top:-40px;width:220px;height:220px;background:radial-gradient(circle,rgba(216,30,44,.4),transparent 70%)}
+.insta-prof{display:flex;gap:16px;align-items:center;position:relative;z-index:2}
+.avatar{width:72px;height:72px;border-radius:50%;background:linear-gradient(45deg,#F9CE34,#EE2A7B,#6228D7);padding:3px}
+.avatar div{width:100%;height:100%;background:#111;border-radius:50%;display:grid;place-items:center;font-family:'Anton';font-size:28px;color:#fff;border:2px solid #111}
+.insta-stats{display:flex;gap:26px;position:relative;z-index:2}
+.insta-stats div{text-align:center} .insta-stats b{font-family:'Anton';font-size:22px;display:block} .insta-stats span{font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:.7}
+.insta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.insta-grid a{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:1;background:#eee;display:block}
+.insta-grid a.tall{grid-row:span 2;aspect-ratio:auto}
+.insta-grid img{width:100%;height:100%;object-fit:cover;transition:.7s}
+.insta-grid a:hover img{transform:scale(1.1)}
+.insta-grid a::after{content:"\f16d";font-family:"Font Awesome 6 Brands";position:absolute;inset:0;display:grid;place-items:center;background:rgba(13,11,9,.45);color:#fff;font-size:28px;opacity:0;transition:.3s}
+.insta-grid a:hover::after{opacity:1}
+/* gallery */
+#gallery{background:#0D0B09;padding:96px 0}
+.g-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.g-grid button{border:none;background:none;padding:0;border-radius:18px;overflow:hidden;cursor:pointer;position:relative;height:260px}
+.g-grid button:first-child{grid-column:span 2;grid-row:span 2;height:532px}
+.g-grid img{width:100%;height:100%;object-fit:cover;transition:.7s}
+.g-grid button:hover img{transform:scale(1.08)}
+.g-grid button span{position:absolute;bottom:12px;left:12px;background:rgba(0,0,0,.65);backdrop-filter:blur(8px);color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;padding:8px 12px;border-radius:100px}
+/* reviews */
+#reviews{background:var(--cream);color:#151110;padding:96px 0}
+.rev-hero{display:grid;grid-template-columns:420px 1fr;gap:28px;align-items:stretch}
+.rev-score{background:#111;color:var(--cream);border-radius:26px;padding:38px;text-align:center;position:relative;overflow:hidden}
+.rev-score::before{content:"G";position:absolute;right:-10px;bottom:-30px;font-family:'Anton';font-size:220px;opacity:.06;line-height:1}
+.rev-score .big{font-family:'Anton';font-size:110px;line-height:.9}
+.rev-score .big small{font-size:36px;opacity:.5}
+.g-btns{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;justify-content:center}
+.rev-info{background:#fff;border:1px solid #EADFC8;border-radius:26px;padding:30px}
+.rev-info h3{font-family:'Anton';font-size:28px;margin-bottom:8px}
+.rev-steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:20px 0}
+.step{background:#FFF8EC;border:1px solid #EADFC8;border-radius:16px;padding:18px;text-align:center}
+.step b{font-family:'Anton';font-size:20px;display:block;margin:8px 0 4px}
+.step p{font-size:12.5px;color:#7A6E5F;line-height:1.6}
+.step i{width:44px;height:44px;border-radius:50%;background:#111;color:var(--gold2);display:inline-grid;place-items:center}
+/* location */
+#contact{background:#FFFDF7;color:#151110;padding:96px 0 120px}
+.loc-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:20px;margin-top:10px}
+.loc-card{background:#111;color:var(--cream);border-radius:26px;padding:34px;position:relative;overflow:hidden}
+.loc-card::after{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--red),var(--orange),var(--gold))}
+.loc-row{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.1);align-items:flex-start}
+.loc-row i{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.08);display:grid;place-items:center;color:var(--gold2);flex-shrink:0}
+.loc-row b{display:block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold2);margin-bottom:4px}
+.loc-row p,.loc-row a.val{font-size:16px;font-weight:600;line-height:1.5}
+.map{border-radius:26px;overflow:hidden;border:1px solid #EADFC8;min-height:480px;position:relative;background:#EDE4D1}
+.map iframe{width:100%;height:100%;min-height:480px;border:0;filter:saturate(1.1)}
+.map-pin{position:absolute;left:50%;top:42%;transform:translate(-50%,-100%);background:#111;color:#fff;padding:12px 16px;border-radius:14px;font-weight:800;font-size:13px;box-shadow:0 16px 40px rgba(0,0,0,.3);pointer-events:none;white-space:nowrap}
+.map-pin::after{content:"";position:absolute;left:50%;bottom:-8px;transform:translateX(-50%);border:8px solid transparent;border-top-color:#111;border-bottom:0}
+/* final */
+#final{position:relative;min-height:84vh;display:grid;place-items:center;text-align:center;overflow:hidden;padding:100px 28px}
+#final img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#final::after{content:"";position:absolute;inset:0;background:radial-gradient(70% 70% at 50% 50%,rgba(13,11,9,.35) 0%,rgba(13,11,9,.88) 100%),linear-gradient(180deg,#0D0B09 0%,transparent 25%,transparent 70%,#0D0B09 100%)}
+.final-in{position:relative;z-index:2;max-width:960px}
+.final-in h2{font-family:'Anton';font-size:clamp(48px,8.5vw,110px);line-height:.9;text-transform:uppercase}
+.final-in h2 em{font-family:'Fraunces';font-style:italic;font-weight:400;color:var(--gold2);text-transform:none}
+.final-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+/* footer */
+footer{background:#0A0908;border-top:1px solid var(--line);padding:50px 0 120px}
+.foot{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px;max-width:1280px;margin:0 auto;padding:0 28px}
+.foot h5{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold2);margin-bottom:16px}
+.foot a,.foot p{color:var(--mut);font-size:14px;line-height:2}
+.foot a:hover{color:#fff}
+/* bottom bar */
+#bbar{position:fixed;bottom:12px;left:12px;right:12px;z-index:900;background:rgba(17,17,17,.92);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.14);border-radius:18px;display:none;grid-template-columns:1fr 1fr 1fr;padding:8px;gap:8px;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+#bbar a,#bbar button{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border-radius:12px;font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;border:none;cursor:pointer}
+#bbar .bb1{background:rgba(255,255,255,.1);color:#fff} #bbar .bb2{background:var(--red);color:#fff} #bbar .bb3{background:var(--cream);color:#111}
+/* craving drawer */
+#overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:960;opacity:0;visibility:hidden;transition:.3s}
+#overlay.show{opacity:1;visibility:visible}
+#drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,92vw);background:var(--cream);color:#151110;z-index:970;transform:translateX(105%);transition:.45s cubic-bezier(.7,0,.2,1);display:flex;flex-direction:column;border-radius:24px 0 0 24px;overflow:hidden}
+#drawer.open{transform:none}
+#drawer header{background:#111;color:var(--cream);padding:22px;display:flex;justify-content:space-between;align-items:center}
+#drawer header h3{font-family:'Anton';font-size:22px;letter-spacing:.04em}
+#clist{flex:1;overflow:auto;padding:18px;display:flex;flex-direction:column;gap:10px}
+.citem{display:flex;gap:12px;background:#fff;border:1px solid #EADFC8;border-radius:14px;padding:10px;align-items:center}
+.citem img{width:64px;height:64px;border-radius:10px;object-fit:cover}
+.citem b{font-size:14px;display:block} .citem small{font-size:12px;color:#8A7D6D}
+.citem button{margin-left:auto;width:32px;height:32px;border-radius:50%;border:1px solid #EADFC8;background:#fff;cursor:pointer}
+#drawer footer{padding:18px;background:#fff;border-top:1px solid #EADFC8}
+/* lightbox */
+#light{position:fixed;inset:0;z-index:980;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;flex-direction:column;gap:16px;padding:20px}
+#light.show{display:flex}
+#light img{max-width:min(1000px,92vw);max-height:74vh;border-radius:18px;object-fit:contain}
+#light .l-nav{display:flex;gap:10px;align-items:center;color:#fff}
+#light .l-nav button{width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;cursor:pointer;font-size:18px}
+/* toast */
+#toast{position:fixed;bottom:90px;left:50%;transform:translate(-50%,20px);background:#111;color:#fff;padding:13px 20px;border-radius:100px;font-size:13px;font-weight:700;z-index:990;opacity:0;transition:.3s;border:1px solid rgba(255,255,255,.15);pointer-events:none;max-width:90vw;text-align:center}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+/* reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:.8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+/* float btn */
+#craveBtn{position:fixed;right:22px;bottom:22px;z-index:905;background:var(--red);color:#fff;border:none;border-radius:100px;padding:15px 20px;font-weight:800;font-size:13px;letter-spacing:.1em;cursor:pointer;box-shadow:0 16px 40px rgba(216,30,44,.45);display:flex;gap:10px;align-items:center;transition:.3s}
+#craveBtn:hover{transform:translateY(-3px) scale(1.03)}
+#craveBtn em{font-style:normal;background:#fff;color:var(--red);min-width:24px;height:24px;border-radius:50%;display:inline-grid;place-items:center;font-size:13px;padding:0 6px}
+@media(max-width:1020px){
+.nav-links{display:none}.nav-cta .btn-ghost{display:none}
+.hero-inner{grid-template-columns:1fr}.hero-card{transform:none;max-width:520px}.hero-card .hc-img{height:220px}
+.about-grid,.sig-grid,.crave-grid,.loc-grid,.rev-hero{grid-template-columns:1fr}
+.sig-view{position:static}.sig-view .sv-img{height:320px}
+#menuGrid{grid-template-columns:1fr 1fr}
+.insta-grid{grid-template-columns:1fr 1fr}.g-grid{grid-template-columns:1fr 1fr}.g-grid button{height:200px}.g-grid button:first-child{grid-column:span 2;height:300px}
+.foot{grid-template-columns:1fr}
+.rev-steps{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+.wrap{padding:0 18px}.hero{padding:110px 18px 0}nav{padding:12px 16px}
+.hero h1{font-size:60px}
+#bbar{display:grid}
+#craveBtn{bottom:88px;right:12px}
+#menuGrid{grid-template-columns:1fr}
+.cat-card{min-width:262px;max-width:262px;height:420px}
+.hamb{display:grid;place-items:center}
+.nav-cta .btn-red{padding:12px 16px;font-size:12px}
+.insta-stats{gap:16px}
+footer{padding-bottom:170px}
+.scroll-hint{padding-bottom:120px}
+}
+</style>
+</head>
+<body>
+
+<div id="loader"><div class="l-logo">HIRAZ <span>FOODS</span></div><div class="l-bar"><i></i></div><p>Bijbehara • Big Cravings</p></div>
+
+<nav id="nav">
+<div class="brand"><div class="brand-mark">H</div><div class="brand-txt"><b>HIRAZ FOODS</b><small>Bijbehara • J&K</small></div></div>
+<div class="nav-links" id="navLinks">
+<a href="#home" class="active">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+</div>
+<div class="nav-cta">
+<a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Hiraz+Foods+Near+Govt+Girls+Higher+Secondary+School+Zirpara+Bijbehara" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Directions</a>
+<a class="btn btn-red" href="#menu">View Menu</a>
+<button class="hamb" id="hamb" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+</div>
+</nav>
+
+<div id="mDrawer">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px"><div class="brand"><div class="brand-mark">H</div><div class="brand-txt"><b>HIRAZ FOODS</b><small>Bijbehara • J&K</small></div></div><button id="mClose" style="width:46px;height:46px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.08);color:#fff;font-size:18px;cursor:pointer"><i class="fa-solid fa-xmark"></i></button></div>
+<a class="mlink" href="#home">HOME <span>01</span></a><a class="mlink" href="#menu">MENU <span>02</span></a><a class="mlink" href="#about">ABOUT <span>03</span></a><a class="mlink" href="#gallery">GALLERY <span>04</span></a><a class="mlink" href="#reviews">REVIEWS <span>05</span></a><a class="mlink" href="#contact">CONTACT <span>06</span></a>
+<div style="display:flex;gap:10px;margin-top:22px"><a class="btn btn-red" style="flex:1" href="tel:7006690740"><i class="fa-solid fa-phone"></i> Call Now</a><a class="btn btn-ghost" style="flex:1" href="https://www.google.com/maps/search/?api=1&query=Hiraz+Foods+Zirpara+Bijbehara" target="_blank" rel="noopener">Directions</a></div>
+<p style="margin-top:18px;color:var(--mut);font-size:13px;line-height:1.7">Near Govt Girls Higher Secondary School, Zirpara, Bijbehara 192124<br>@hiraz_bijbehara • ₹200–₹400 per person</p>
+</div>
+
+<header class="hero" id="home">
+<div class="hero-bg"><img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=1800&q=80&auto=format&fit=crop" alt="Wood fired pizza closeup"></div>
+<div class="hero-red"></div>
+<div style="position:absolute;left:26px;top:50%;transform:translateY(-50%) rotate(-90deg);transform-origin:left center;font-size:10px;letter-spacing:.4em;color:rgba(255,246,233,.5);z-index:2" class="hide-m">HIRAZ — BIJBEHARA — EST. FOR CRAVINGS</div>
+<div style="width:100%">
+<div class="hero-inner">
+<div>
+<div class="eyebrow"><span class="dot"></span> Bijbehara • Zirpara • Now Serving Cravings</div>
+<h1>CRAVE IT.<br><span class="red">LOVE</span> <span class="it">it.</span><br><span class="out">COME BACK</span><br>FOR IT.</h1>
+<p class="hero-sub"><b>Pizza. Burgers. Hot &amp; Crispy. Mocktails. Rolls. Coffee.</b><br>Momos. Biryani. Chicken Fried Rice — made hot, served fast, remembered long.</p>
+<div class="hero-ctas">
+<a href="#menu" class="btn btn-red"><i class="fa-solid fa-utensils"></i> Explore Menu</a>
+<a href="tel:7006690740" class="btn btn-cream"><i class="fa-solid fa-phone"></i> Call Now</a>
+<a href="https://www.google.com/maps/search/?api=1&query=Hiraz+Foods+Near+Govt+Girls+Higher+Secondary+School+Zirpara+Bijbehara" target="_blank" rel="noopener" class="btn btn-ghost"><i class="fa-solid fa-diamond-turn-right"></i> Get Directions</a>
+</div>
+<div class="hero-meta">
+<div class="meta-pill"><strong>4.2 <span style="color:var(--gold2);font-size:16px">★</span></strong><small>407 Google<br>Reviews</small></div>
+<div class="meta-pill"><strong>₹200–400</strong><small>Per Person<br>Approx.</small></div>
+<div class="meta-pill"><div class="stars">★★★★<span style="opacity:.35">★</span></div><small>Loved on<br>the strip</small></div>
+</div>
+</div>
+<div class="hero-card reveal in">
+<div class="hc-img"><div class="hc-badge"><i class="fa-solid fa-fire" style="color:var(--orange)"></i> Hot & Crispy Special</div><img src="https://images.unsplash.com/photo-1562967914-608f82629710?w=900&q=80&auto=format&fit=crop" alt="Hot and crispy fried chicken"></div>
+<div class="hc-body"><h3>CRISPY THAT CRUNCHES LOUD.</h3><p>Golden-fried chicken, stacked burgers & wood-fired pizza — right here in Zirpara, Bijbehara.</p><div class="hc-row"><a href="#menu" class="btn btn-dark">See Menu</a><a href="tel:7006690740" class="btn btn-red">Call 70066 90740</a></div></div>
+</div>
+</div>
+<div class="wrap scroll-hint"><span>Scroll for hunger</span><div class="line"></div><span><i class="fa-solid fa-arrow-down"></i></span></div>
+</div>
+</header>
+
+<div class="marquee"><div class="marquee-track" id="mqTrack">
+<span>Pizza</span><span>Burgers</span><span>Hot & Crispy Chicken</span><span>Mocktails</span><span>Rolls</span><span>Coffee</span><span>Momos</span><span>Biryani</span><span>Chicken Fried Rice</span>
+</div></div>
+
+<section id="categories" class="dark">
+<div class="wrap sec-head reveal"><div><div class="kicker">Pick your craving</div><h2 class="title">WHAT ARE YOU<br><em style="color:var(--gold2)">hungry</em> FOR?</h2></div><p style="max-width:340px;color:var(--mut);font-size:14px;line-height:1.7">Six signatures that built our name in Bijbehara. Tap any card to jump straight into the menu.</p></div>
+<div class="cat-scroll" id="catScroll"></div>
+<div class="wrap" style="display:flex;gap:10px;align-items:center;color:var(--cream-dim);font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-top:6px"><i class="fa-solid fa-hand-pointer"></i> Drag / Swipe • Click to filter menu</div>
+</section>
+
+<section id="about" class="light-sec">
+<div class="wrap about-grid">
+<div class="about-imgs reveal">
+<img class="a1" src="https://www.designarena.ai/u/01db99fe-1dc4-485d-9794-1d394e6d1ddf" alt="Inside Hiraz Foods Bijbehara - wooden seating and warm lights">
+<div class="about-badge"><small>Inside Hiraz</small><b>ZIRPARA</b><small>Warm • Wooden • Youthful</small></div>
+<img class="a2" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80&auto=format&fit=crop" alt="Fresh pizza">
+<img class="a3" src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&q=80&auto=format&fit=crop" alt="Mocktails">
+</div>
+<div class="about-copy reveal">
+<div class="kicker">About Hiraz • Bijbehara</div>
+<h2 class="title">MADE FOR CRAVINGS.<br>BUILT FOR <em>good times.</em></h2>
+<p class="lead">Not a fancy fine-dine. A loud, warm, delicious adda for pizza nights, crispy bites & late mocktails.</p>
+<p class="desc">Hiraz Foods sits near Govt Girls Higher Secondary School, Zirpara — wooden booths, red beams, big pendant lights and the smell of fresh crust in the air. Students, families, friends and travellers stop here for familiar favourites done right: cheesy pizzas, juicy burgers, hot & crispy chicken, rolls, momos, biryani, fried rice, coffee and coolers.</p>
+<div class="fact-grid">
+<div class="fact"><i class="fa-solid fa-star"></i><div><b>4.2 ★ • 407 Reviews</b><span>On Google</span></div></div>
+<div class="fact"><i class="fa-solid fa-wallet"></i><div><b>₹200–₹400</b><span>Per person approx.</span></div></div>
+<div class="fact"><i class="fa-solid fa-location-dot"></i><div><b>Zirpara, Bijbehara</b><span>192124, J&K</span></div></div>
+<div class="fact"><i class="fa-solid fa-phone"></i><div><b>70066 90740</b><span>Call for menu & orders</span></div></div>
+</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap"><a href="#menu" class="btn btn-dark">Explore the food <i class="fa-solid fa-arrow-right"></i></a><a href="https://instagram.com/hiraz_bijbehara" target="_blank" rel="noopener" class="btn" style="border:1px solid #111"><i class="fa-brands fa-instagram"></i> @hiraz_bijbehara</a></div>
+</div>
+</div>
+</section>
+
+<section id="signature" class="dark">
+<div class="wrap reveal"><div class="kicker">Signature • The Hiraz nine</div><h2 class="title">ONE STREET. <em style="color:var(--gold2)">nine</em> OBSESSIONS.</h2><p style="color:var(--mut);margin-top:12px;max-width:560px;line-height:1.7;font-size:15px">Hover or tap to taste with your eyes. Everything below is actually served at Hiraz — no filler, no fantasy.</p></div>
+<div class="wrap sig-grid">
+<div class="sig-list reveal" id="sigList"></div>
+<div class="sig-view reveal"><div class="sv-img"><img id="sigImg" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1000&q=80&auto=format&fit=crop" alt="Signature preview"></div><div class="sv-body"><div><div style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2);font-weight:800" id="sigCat">Pizza</div><h3 id="sigTitle">Wood-Fired Pizza</h3><p id="sigDesc">Bubbling cheese, crisp base, loaded toppings.</p></div><button class="btn btn-red" onclick="addCraving(currentSig)" style="flex-shrink:0">Add +</button></div></div>
+</div>
+</section>
+
+<section id="menu" class="light-sec">
+<div class="wrap">
+<div class="reveal"><div class="kicker">Digital food catalogue</div><h2 class="title">THE HIRAZ <em>menu</em></h2><p style="color:#7A6E5F;margin-top:10px;max-width:620px;line-height:1.7;font-size:15px">Browse by craving. Photography-led, fast and honest. Full choice & today's specials are on the in-store menu.</p></div>
+<div class="menu-note"><i class="fa-solid fa-circle-info"></i><span><b>Good to know:</b> We don't list prices online to avoid confusion. Expect around <b>₹200–₹400 per person</b>. Call <a href="tel:7006690740" style="text-decoration:underline;font-weight:800">7006690740</a> for today's menu.</span></div>
+<div class="menu-topbar">
+<div class="filters" id="filters"></div>
+<div class="search"><i class="fa-solid fa-magnifying-glass"></i><input id="search" type="text" placeholder="Search pizza, momos, coffee..."></div>
+</div>
+<div id="menuGrid"></div>
+<p id="noRes" style="display:none;text-align:center;padding:40px;color:#8A7D6D;font-weight:700">No dishes match — try “chicken” or “coffee”.</p>
+<p style="margin-top:18px;font-size:12px;color:#8A7D6D;line-height:1.7">Highlights shown by category: Pizza • Burgers • Chicken • Momos • Rolls • Rice • Mocktails • Coffee • Biryani. Ask in-store for full choice.</p>
+</div>
+</section>
+
+<section id="cravings" class="dark">
+<div class="wrap sec-head reveal"><div><div class="kicker">Featured cravings</div><h2 class="title">MOST<br><em style="color:var(--gold2)">re-ordered</em> BITES</h2></div><button class="btn btn-red" onclick="toggleDrawer(true)"><i class="fa-solid fa-basket-shopping"></i> My Craving List <span id="craveCountTop" style="background:#fff;color:var(--red);border-radius:50%;min-width:24px;height:24px;display:inline-grid;place-items:center;font-size:12px">0</span></button></div>
+<div class="wrap crave-grid">
+<div class="crave-feat reveal"><img src="https://images.unsplash.com/photo-1562967914-608f82629710?w=1200&q=80&auto=format&fit=crop" alt="Hot and crispy chicken"><div class="cf-in"><div class="kicker" style="color:var(--gold2)">Hot & Crispy • Hero dish</div><h3>HOT & CRISPY CHICKEN THAT SHATTERS.</h3><p style="color:var(--mut);margin:10px 0 18px;max-width:440px;line-height:1.6">Golden, juicy, pepper-hot. The plate everyone photographs first.</p><div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-red" onclick="addCraving(3)"><i class="fa-solid fa-plus"></i> Add to craving</button><a class="btn btn-ghost" href="#menu">See all chicken</a></div></div></div>
+<div class="crave-side">
+<div class="crave-mini reveal"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80&auto=format&fit=crop" alt="Burger"><div><div><div style="font-size:11px;letter-spacing:.2em;color:var(--gold2);font-weight:800">BURGERS</div><h4>STACKED & JUICY</h4></div><button class="btn btn-cream" onclick="addCraving(4)">Add +</button></div></div>
+<div class="crave-mini reveal"><img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&q=80&auto=format&fit=crop" alt="Mocktails"><div><div><div style="font-size:11px;letter-spacing:.2em;color:var(--gold2);font-weight:800">MOCKTAILS</div><h4>ICE-COLD COOLERS</h4></div><button class="btn btn-cream" onclick="addCraving(14)">Add +</button></div></div>
+</div>
+</div>
+</section>
+
+<section id="instagram">
+<div class="wrap">
+<div class="insta-head reveal"><div class="insta-prof"><div class="avatar"><div>H</div></div><div><div style="font-weight:800;font-size:18px">hiraz_bijbehara <i class="fa-solid fa-circle-check" style="color:#4da6ff;font-size:14px"></i></div><div style="font-size:13px;opacity:.7">Hiraz Foods • Bijbehara</div></div></div><div class="insta-stats"><div><b>568</b><span>Posts</span></div><div><b>2,127</b><span>Followers</span></div><div><b>4.2 ★</b><span>407 Reviews</span></div></div><a href="https://instagram.com/hiraz_bijbehara" target="_blank" rel="noopener" class="btn btn-red" style="position:relative;z-index:2"><i class="fa-brands fa-instagram"></i> Follow on Instagram</a></div>
+<div class="reveal" style="margin-bottom:16px"><div class="kicker">Instagram • @hiraz_bijbehara</div><h2 class="title">MADE FOR THE <em>feed.</em></h2></div>
+<div class="insta-grid reveal" id="instaGrid"></div>
+</div>
+</section>
+
+<section id="gallery" class="dark">
+<div class="wrap sec-head reveal"><div><div class="kicker">Food gallery • Inside & plates</div><h2 class="title">COME HUNGRY.<br>LEAVE <em style="color:var(--gold2)">happy.</em></h2></div><p style="color:var(--mut);max-width:340px;font-size:14px;line-height:1.7">Real room, real food. Tap any photo to view full-screen.</p></div>
+<div class="wrap g-grid reveal" id="gGrid"></div>
+</section>
+
+<section id="reviews">
+<div class="wrap">
+<div class="reveal"><div class="kicker">Social proof • Google</div><h2 class="title">4.2 STARS. 407 VOICES. <em>one craving street.</em></h2></div>
+<div class="rev-hero" style="margin-top:24px">
+<div class="rev-score reveal"><div style="font-size:12px;letter-spacing:.26em;text-transform:uppercase;opacity:.7;font-weight:800"><i class="fa-brands fa-google" style="color:#fff"></i> Google Reviews</div><div class="big">4.2<small>/5</small></div><div class="stars" style="font-size:22px">★★★★<span style="opacity:.3">★</span></div><p style="opacity:.7;margin-top:10px;font-size:14px">Based on <b>407 Google reviews</b></p><div class="g-btns"><a class="btn btn-red" href="https://www.google.com/maps/search/?api=1&query=Hiraz+Foods+Zirpara+Bijbehara" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Read on Google</a><a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Hiraz+Foods+Zirpara+Bijbehara" target="_blank" rel="noopener">Write a review</a></div><p style="font-size:11px;opacity:.5;margin-top:14px;line-height:1.6">We only show our live Google rating here — no edited or invented testimonials.</p></div>
+<div class="rev-info reveal"><h3>WHAT PEOPLE LOVE TALKING ABOUT</h3><p style="color:#7A6E5F;font-size:14px;line-height:1.7">These are the dishes & vibes most mentioned on Google for Hiraz Foods. Tap to see them in the menu.</p><div class="rev-steps"><div class="step"><i class="fa-solid fa-pizza-slice"></i><b>Pizza & Burgers</b><p>Cheesy, loaded & youth-approved favourites.</p></div><div class="step"><i class="fa-solid fa-drumstick-bite"></i><b>Hot & Crispy</b><p>Crunchy fried chicken that keeps regulars returning.</p></div><div class="step"><i class="fa-solid fa-mug-saucer"></i><b>Coffee & Coolers</b><p>Mocktails & coffee for long adda sessions.</p></div></div><div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-dark" onclick="filterAndGo('pizza')">See Pizza</button><button class="btn btn-dark" onclick="filterAndGo('chicken')">See Crispy</button><button class="btn btn-dark" onclick="filterAndGo('mocktails')">See Mocktails</button><a class="btn" style="border:1px solid #111" href="tel:7006690740"><i class="fa-solid fa-phone"></i> 7006690740</a></div><div style="margin-top:18px;background:#FFF8EC;border:1px dashed #D9CBB2;border-radius:14px;padding:14px 16px;font-size:13px;color:#6B5F52;line-height:1.6"><i class="fa-solid fa-quote-left" style="color:var(--red)"></i> Ate here recently? Your honest Google review helps a local Bijbehara spot grow. Thank you for supporting us.</div></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap reveal"><div class="kicker">Find us • Zirpara</div><h2 class="title">RIGHT AROUND THE <em>corner.</em></h2></div>
+<div class="wrap loc-grid">
+<div class="loc-card reveal">
+<h3 style="font-family:'Anton';font-size:32px;letter-spacing:.02em">HIRAZ FOODS</h3><p style="color:var(--mut);font-size:14px;margin:6px 0 8px">Big Cravings. Bold Flavours. Good Times.</p>
+<div class="loc-row"><i class="fa-solid fa-location-dot"></i><div><b>Address</b><p>Near Govt Girls Higher Secondary School, Zirpara, Bijbehara, Jammu & Kashmir 192124</p></div></div>
+<div class="loc-row"><i class="fa-solid fa-phone"></i><div><b>Phone</b><a class="val" href="tel:7006690740" style="font-size:22px;font-family:'Anton';letter-spacing:.04em">70066 90740</a><p style="font-size:13px;color:var(--mut)">Tap to call for menu & orders</p></div></div>
+<div class="loc-row"><i class="fa-brands fa-instagram"></i><div><b>Instagram</b><a class="val" href="https://instagram.com/hiraz_bijbehara" target="_blank" rel="noopener">@hiraz_bijbehara</a><p style="font-size:13px;color:var(--mut)">2,127 followers • 568 posts</p></div></div>
+<div class="loc-row" style="border:none"><i class="fa-solid fa-star"></i><div><b>Rating & Budget</b><p>4.2 ★ (407 Google reviews) • ₹200–₹400 per person</p></div></div>
+<div style="display:flex;gap:10px;margin-top:18px;flex-wrap:wrap"><a href="tel:7006690740" class="btn btn-red" style="flex:1"><i class="fa-solid fa-phone"></i> Call Now</a><a href="https://www.google.com/maps/search/?api=1&query=Hiraz+Foods+Near+Govt+Girls+Higher+Secondary+School+Zirpara+Bijbehara" target="_blank" rel="noopener" class="btn btn-cream" style="flex:1"><i class="fa-solid fa-diamond-turn-right"></i> Get Directions</a></div>
+</div>
+<div class="map reveal"><iframe title="Hiraz Foods location map" loading="lazy" src="https://www.google.com/maps?q=Govt+Girls+Higher+Secondary+School+Zirpara+Bijbehara+Jammu+and+Kashmir+192124&output=embed"></iframe><div class="map-pin"><i class="fa-solid fa-location-dot" style="color:var(--red)"></i> Hiraz Foods • Zirpara</div></div>
+</div>
+</section>
+
+<section id="final">
+<img class="bg" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1800&q=80&auto=format&fit=crop" alt="Loaded pizza feast">
+<div class="final-in reveal"><div class="eyebrow" style="margin:0 auto"><span class="dot"></span> Hiraz Foods • Bijbehara</div><h2 style="margin-top:18px">YOUR NEXT<br>CRAVING <em>starts</em><br>HERE.</h2><p style="color:var(--mut);margin-top:14px">Pizza. Burgers. Hot & Crispy. Mocktails. Rolls. Coffee.</p><div class="final-ctas"><a href="#menu" class="btn btn-red">Explore Menu</a><a href="tel:7006690740" class="btn btn-cream"><i class="fa-solid fa-phone"></i> Call Now</a><a href="https://www.google.com/maps/search/?api=1&query=Hiraz+Foods+Zirpara+Bijbehara" target="_blank" rel="noopener" class="btn btn-ghost">Get Directions</a></div><p style="margin-top:18px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2);font-weight:800">Big Cravings • Bold Flavours • Good Times</p></div>
+</section>
+
+<footer>
+<div class="foot">
+<div><div class="brand" style="margin-bottom:14px"><div class="brand-mark">H</div><div class="brand-txt"><b style="color:#fff">HIRAZ FOODS</b><small>Bijbehara • J&K</small></div></div><p>Pizza, Burgers, Hot & Crispy Chicken, Mocktails, Rolls, Coffee, Momos, Biryani & Fried Rice — in the heart of Zirpara.</p><p style="margin-top:10px">4.2 ★ • 407 Google Reviews<br>₹200–₹400 per person</p></div>
+<div><h5>Explore</h5><a href="#home">Home</a><br><a href="#menu">Menu</a><br><a href="#about">About</a><br><a href="#gallery">Gallery</a><br><a href="#reviews">Reviews</a><br><a href="#contact">Contact</a></div>
+<div><h5>Visit / Contact</h5><p>Near Govt Girls Higher Secondary School, Zirpara, Bijbehara, J&K 192124</p><p><a href="tel:7006690740" style="color:#fff;font-weight:800;font-size:16px">7006690740</a></p><p><a href="https://instagram.com/hiraz_bijbehara" target="_blank" rel="noopener">@hiraz_bijbehara</a> • 2,127 followers</p><div style="display:flex;gap:8px;margin-top:12px"><a href="tel:7006690740" class="btn btn-red" style="padding:11px 18px">Call</a><a href="https://www.google.com/maps/search/?api=1&query=Hiraz+Foods+Zirpara+Bijbehara" target="_blank" rel="noopener" class="btn btn-ghost" style="padding:11px 18px">Directions</a></div></div>
+</div>
+<p style="text-align:center;color:rgba(255,246,233,.35);font-size:12px;margin-top:36px;letter-spacing:.08em">© 2026 Hiraz Foods, Bijbehara. Made with hunger in Kashmir.</p>
+</footer>
+
+<div id="bbar"><a class="bb1" href="#menu"><i class="fa-solid fa-utensils"></i> Menu</a><a class="bb2" href="tel:7006690740"><i class="fa-solid fa-phone"></i> Call</a><a class="bb3" href="https://www.google.com/maps/search/?api=1&query=Hiraz+Foods+Zirpara+Bijbehara" target="_blank" rel="noopener"><i class="fa-solid fa-diamond-turn-right"></i> Directions</a></div>
+
+<button id="craveBtn" onclick="toggleDrawer(true)"><i class="fa-solid fa-basket-shopping"></i> CRAVING <em id="craveCount">0</em></button>
+
+<div id="overlay" onclick="toggleDrawer(false)"></div>
+<aside id="drawer" aria-label="Craving list">
+<header><div><h3>MY CRAVING LIST</h3><small style="opacity:.6;font-size:12px">Show this on call • <span id="dCount">0</span> items</small></div><button onclick="toggleDrawer(false)" style="width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;cursor:pointer"><i class="fa-solid fa-xmark"></i></button></header>
+<div id="clist"></div>
+<footer><div style="display:flex;gap:10px"><button onclick="clearCraving()" class="btn" style="border:1px solid #D9CBB2;flex:1">Clear</button><a href="tel:7006690740" class="btn btn-red" style="flex:2"><i class="fa-solid fa-phone"></i> Call to Order</a></div><p style="font-size:12px;color:#8A7D6D;margin-top:10px;line-height:1.6;text-align:center">Call <b>7006690740</b> & read out your list. Prices & availability confirmed in-store (₹200–₹400 pp approx).</p></footer>
+</aside>
+
+<div id="light"><img id="lightImg" src="" alt="Gallery preview"><div class="l-nav"><button onclick="stepLight(-1)"><i class="fa-solid fa-arrow-left"></i></button><span id="lightCap" style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;opacity:.8"></span><button onclick="stepLight(1)"><i class="fa-solid fa-arrow-right"></i></button><button onclick="closeLight()"><i class="fa-solid fa-xmark"></i></button></div></div>
+<div id="toast"></div>
+
+<script>
+// loader
+window.addEventListener('load',()=>{setTimeout(()=>document.getElementById('loader').classList.add('hide'),900)});
+setTimeout(()=>document.getElementById('loader').classList.add('hide'),3200);
+// marquee duplicate
+const mq=document.getElementById('mqTrack'); mq.innerHTML+=mq.innerHTML;
+// nav scroll + spy
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>30)});
+const links=[...document.querySelectorAll('#navLinks a')];
+const secs=['home','menu','about','gallery','reviews','contact'].map(id=>document.getElementById(id));
+window.addEventListener('scroll',()=>{
+let cur='home';
+secs.forEach(s=>{if(s && window.scrollY>=s.offsetTop-220) cur=s.id});
+links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));
+},{passive:true});
+// mobile drawer
+const mDrawer=document.getElementById('mDrawer');
+document.getElementById('hamb').onclick=()=>mDrawer.classList.add('open');
+document.getElementById('mClose').onclick=()=>mDrawer.classList.remove('open');
+mDrawer.querySelectorAll('a').forEach(a=>a.onclick=()=>mDrawer.classList.remove('open'));
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// DATA
+const U={
+pizza:"https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80&auto=format&fit=crop",
+pizza2:"https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=800&q=80&auto=format&fit=crop",
+pizza3:"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80&auto=format&fit=crop",
+burger:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80&auto=format&fit=crop",
+burger2:"https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=800&q=80&auto=format&fit=crop",
+crispy:"https://images.unsplash.com/photo-1562967914-608f82629710?w=800&q=80&auto=format&fit=crop",
+crispy2:"https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=800&q=80&auto=format&fit=crop",
+mock:"https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&q=80&auto=format&fit=crop",
+mock2:"https://images.unsplash.com/photo-1536935338788-846bb9981813?w=800&q=80&auto=format&fit=crop",
+roll:"https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=800&q=80&auto=format&fit=crop",
+roll2:"https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=800&q=80&auto=format&fit=crop",
+coffee:"https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80&auto=format&fit=crop",
+coffee2:"https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=80&auto=format&fit=crop",
+momos:"https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=800&q=80&auto=format&fit=crop",
+momos2:"https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=800&q=80&auto=format&fit=crop",
+biryani:"https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=800&q=80&auto=format&fit=crop",
+rice:"https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&q=80&auto=format&fit=crop",
+interior:"https://www.designarena.ai/u/01db99fe-1dc4-485d-9794-1d394e6d1ddf"
+};
+
+const cats=[
+{n:"PIZZA",img:U.pizza,d:"Hand-stretched, cheese-loaded, baked hot.",tag:"Bestseller in Bijbehara",f:"pizza"},
+{n:"BURGERS",img:U.burger,d:"Crispy fillets, soft buns, bold sauces.",tag:"Stacked to crave",f:"burgers"},
+{n:"HOT & CRISPY",img:U.crispy,d:"Golden fried chicken that shatters.",tag:"Crowd roar",f:"chicken"},
+{n:"MOCKTAILS",img:U.mock,d:"Ice-cold coolers, fizzy & fresh.",tag:"Chilled & fizzy",f:"mocktails"},
+{n:"ROLLS",img:U.roll,d:"Flaky paratha wraps, juicy fillings.",tag:"Grab & go",f:"rolls"},
+{n:"COFFEE",img:U.coffee,d:"Hot brews & cold blends for adda.",tag:"Brewed slow",f:"coffee"},
+];
+const catScroll=document.getElementById('catScroll');
+cats.forEach((c,i)=>{
+const d=document.createElement('div');d.className='cat-card';
+d.innerHTML=`<img src="${c.img}" alt="${c.n}" loading="lazy"><div class="cat-top"><span class="cat-num">0${i+1}</span><span class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></span></div><div class="cat-bot"><div class="cat-tag">${c.tag}</div><h3>${c.n}</h3><p>${c.d}</p></div>`;
+d.onclick=()=>filterAndGo(c.f);catScroll.appendChild(d);
+});
+
+// signature
+const sigData=[
+{cat:"Pizza",title:"Wood-Fired Pizza",desc:"Bubbling cheese, crisp base, loaded toppings.",img:U.pizza},
+{cat:"Burgers",title:"Crispy Chicken Burgers",desc:"Crunchy fillet, creamy mayo, toasted bun.",img:U.burger},
+{cat:"Hot & Crispy",title:"Hot & Crispy Chicken",desc:"Golden-fried, pepper-dusted, juicy inside.",img:U.crispy},
+{cat:"Mocktails",title:"Chilled Mocktails",desc:"Mint, berry & citrus coolers over lots of ice.",img:U.mock},
+{cat:"Rolls",title:"Chicken Rolls",desc:"Flaky wraps rolled with smoky chicken.",img:U.roll},
+{cat:"Coffee",title:"Hot & Cold Coffee",desc:"Cappuccino comfort to iced blends.",img:U.coffee},
+{cat:"Momos",title:"Steam Momos",desc:"Delicate, juicy veg & chicken momos.",img:U.momos},
+{cat:"Biryani",title:"Chicken Biryani",desc:"Fragrant rice layered with spiced chicken.",img:U.biryani},
+{cat:"Rice",title:"Chicken Fried Rice",desc:"Smoky wok rice tossed with chicken.",img:U.rice},
+];
+let currentSig=3;
+const sigList=document.getElementById('sigList');
+function renderSig(){
+sigList.innerHTML='';
+sigData.forEach((s,i)=>{
+const el=document.createElement('div');el.className='sig-item'+(i===currentSig?' active':'');
+el.innerHTML=`<span class="n">0${i+1}</span><h4>${s.title}</h4><span class="go"><i class="fa-solid fa-arrow-right"></i></span>`;
+const act=()=>{currentSig=i;document.getElementById('sigImg').src=s.img;document.getElementById('sigCat').textContent=s.cat;document.getElementById('sigTitle').textContent=s.title;document.getElementById('sigDesc').textContent=s.desc;renderSig();};
+el.onmouseenter=act;el.onclick=act;sigList.appendChild(el);
+});
+}
+renderSig();
+
+// menu
+const filters=["all","pizza","burgers","chicken","momos","rolls","rice","mocktails","coffee","biryani"];
+const menuItems=[
+{id:1,cat:"pizza",title:"Cheese Burst Pizza",desc:"Hand-stretched base, molten cheese, herb dust.",img:U.pizza,veg:true,tag:"Cheesy & hot"},
+{id:2,cat:"pizza",title:"Chicken Tikka Pizza",desc:"Smoky tikka chunks over bubbling mozzarella.",img:U.pizza2,veg:false,tag:"Loaded"},
+{id:3,cat:"chicken",title:"Hot & Crispy Chicken",desc:"Golden-fried, extra crunch, juicy centre.",img:U.crispy,veg:false,tag:"Hero dish"},
+{id:4,cat:"burgers",title:"Crispy Zinger Burger",desc:"Crunchy fillet, creamy sauce, soft toasted bun.",img:U.burger,veg:false,tag:"Stacked"},
+{id:5,cat:"burgers",title:"Classic Veg Crunch Burger",desc:"Crispy patty, fresh salad, house sauce.",img:U.burger2,veg:true,tag:"Crunchy"},
+{id:6,cat:"chicken",title:"Crispy Chicken Strips",desc:"Bite-size, pepper-dusted, perfect with dips.",img:U.crispy2,veg:false,tag:"Snackable"},
+{id:7,cat:"momos",title:"Chicken Steam Momos",desc:"Thin-skinned, juicy, served steaming hot.",img:U.momos,veg:false,tag:"Steamed fresh"},
+{id:8,cat:"momos",title:"Veg Steam Momos",desc:"Garden veggies folded in delicate wrappers.",img:U.momos2,veg:true,tag:"Light & juicy"},
+{id:9,cat:"rolls",title:"Chicken Tikka Roll",desc:"Flaky paratha wrapped around smoky tikka.",img:U.roll,veg:false,tag:"Grab & go"},
+{id:10,cat:"rolls",title:"Chicken Seekh Roll",desc:"Juicy seekh filling, onions, mint drizzle.",img:U.roll2,veg:false,tag:"Smoky"},
+{id:11,cat:"rice",title:"Chicken Fried Rice",desc:"Wok-tossed rice with chicken & spring onion.",img:U.rice,veg:false,tag:"Wok smoky"},
+{id:12,cat:"biryani",title:"Chicken Biryani",desc:"Fragrant layered rice with spiced chicken.",img:U.biryani,veg:false,tag:"Aromatic"},
+{id:13,cat:"mocktails",title:"Mint Virgin Cooler",desc:"Crushed mint, lime & soda over ice.",img:U.mock,veg:true,tag:"Ice cold"},
+{id:14,cat:"mocktails",title:"Berry Blast Mocktail",desc:"Sweet-tart berries, fizz, fresh garnish.",img:U.mock2,veg:true,tag:"Fizzy"},
+{id:15,cat:"coffee",title:"Cappuccino",desc:"Rich espresso, silky foam, cocoa dust.",img:U.coffee,veg:true,tag:"Hot brew"},
+{id:16,cat:"coffee",title:"Cold Coffee",desc:"Blended thick, chilled & creamy.",img:U.coffee2,veg:true,tag:"Iced"},
+{id:17,cat:"pizza",title:"Veg Loaded Pizza",desc:"Garden veggies, extra cheese, crisp crust.",img:U.pizza3,veg:true,tag:"Garden fresh"},
+{id:18,cat:"rice",title:"Veg Fried Rice",desc:"Smoky wok rice with crunchy veggies.",img:U.rice,veg:true,tag:"Wok tossed"},
+];
+let activeFilter='all', query='';
+const fWrap=document.getElementById('filters');
+function renderFilters(){
+fWrap.innerHTML='';
+filters.forEach(f=>{
+const b=document.createElement('button');b.className='fbtn'+(f===activeFilter?' active':'');b.textContent=f;
+b.onclick=()=>{activeFilter=f;renderFilters();renderMenu();};
+fWrap.appendChild(b);
+});
+}
+renderFilters();
+const grid=document.getElementById('menuGrid');
+function renderMenu(){
+grid.innerHTML='';
+const q=query.toLowerCase();
+const list=menuItems.filter(m=>(activeFilter==='all'||m.cat===activeFilter)&&(m.title.toLowerCase().includes(q)||m.desc.toLowerCase().includes(q)||m.cat.includes(q)));
+document.getElementById('noRes').style.display=list.length?'none':'block';
+list.forEach(m=>{
+const c=document.createElement('article');c.className='mcard';
+c.innerHTML=`<div class="mi"><img src="${m.img}" alt="${m.title}" loading="lazy"><span class="mcat">${m.cat}</span><button class="madd" aria-label="Add ${m.title}"><i class="fa-solid fa-plus"></i></button></div><div class="mb"><h4>${m.title.toUpperCase()}</h4><p>${m.desc}</p><div class="mfoot"><span class="${m.veg?'veg vdot':'nonveg vdot'}">${m.veg?'VEG':'NON-VEG'}</span><span>${m.tag}</span></div></div>`;
+c.querySelector('.madd').onclick=(e)=>{e.stopPropagation();addCraving(m.id);};
+grid.appendChild(c);
+});
+}
+renderMenu();
+document.getElementById('search').addEventListener('input',e=>{query=e.target.value;renderMenu();});
+function filterAndGo(f){activeFilter=f;renderFilters();renderMenu();document.getElementById('menu').scrollIntoView({behavior:'smooth'});}
+
+// craving list
+let craving=[];
+function addCraving(id){
+const item=menuItems.find(m=>m.id===id)||menuItems[2];
+if(!craving.find(c=>c.id===item.id)) craving.push(item);
+updateCraving();
+toast(`Added: ${item.title} — call 7006690740 to order`);
+}
+function clearCraving(){craving=[];updateCraving();}
+function updateCraving(){
+document.getElementById('craveCount').textContent=craving.length;
+document.getElementById('craveCountTop').textContent=craving.length;
+document.getElementById('dCount').textContent=craving.length;
+const box=document.getElementById('clist');box.innerHTML='';
+if(!craving.length){box.innerHTML=`<div style="text-align:center;padding:40px 20px;color:#8A7D6D"><i class="fa-solid fa-basket-shopping" style="font-size:36px;opacity:.3"></i><p style="margin-top:12px;font-weight:700">Your craving list is empty.<br><span style="font-weight:400;font-size:13px">Tap + on any dish to build your order.</span></p><button onclick="toggleDrawer(false);document.getElementById('menu').scrollIntoView({behavior:'smooth'})" class="btn btn-dark" style="margin-top:16px">Browse Menu</button></div>`;return;}
+craving.forEach(it=>{
+const d=document.createElement('div');d.className='citem';
+d.innerHTML=`<img src="${it.img}" alt=""><div><b>${it.title}</b><small>${it.cat} • ${it.tag}</small></div><button aria-label="Remove"><i class="fa-solid fa-xmark"></i></button>`;
+d.querySelector('button').onclick=()=>{craving=craving.filter(c=>c.id!==it.id);updateCraving();};
+box.appendChild(d);
+});
+}
+updateCraving();
+function toggleDrawer(open){
+document.getElementById('drawer').classList.toggle('open',open);
+document.getElementById('overlay').classList.toggle('show',open);
+document.body.style.overflow=open?'hidden':'';
+}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),2600);}
+
+// insta
+const instaImgs=[U.pizza,U.burger,U.crispy,U.mock,U.roll,U.coffee,U.momos,U.biryani];
+const ig=document.getElementById('instaGrid');
+instaImgs.forEach((src,i)=>{
+const a=document.createElement('a');a.href='https://instagram.com/hiraz_bijbehara';a.target='_blank';a.rel='noopener';
+if(i===0) a.classList.add('tall');
+a.innerHTML=`<img src="${src}" alt="Hiraz Foods Instagram post ${i+1}" loading="lazy">`;
+ig.appendChild(a);
+});
+
+// gallery
+const gal=[
+{src:U.interior,cap:"Our Room • Zirpara"},
+{src:U.pizza,cap:"Pizza Night"},
+{src:U.crispy,cap:"Hot & Crispy"},
+{src:U.burger,cap:"Burger Stack"},
+{src:U.mock,cap:"Coolers"},
+{src:U.roll,cap:"Rolls"},
+{src:U.coffee,cap:"Coffee Time"},
+{src:U.momos,cap:"Momos"},
+{src:U.biryani,cap:"Biryani"},
+];
+const gg=document.getElementById('gGrid');let lightIdx=0;
+gal.forEach((g,i)=>{
+const b=document.createElement('button');b.innerHTML=`<img src="${g.src}" alt="${g.cap}" loading="lazy"><span>${g.cap}</span>`;
+b.onclick=()=>openLight(i);gg.appendChild(b);
+});
+function openLight(i){lightIdx=i;document.getElementById('lightImg').src=gal[i].src;document.getElementById('lightCap').textContent=gal[i].cap;document.getElementById('light').classList.add('show');document.body.style.overflow='hidden';}
+function closeLight(){document.getElementById('light').classList.remove('show');document.body.style.overflow='';}
+function stepLight(d){lightIdx=(lightIdx+d+gal.length)%gal.length;openLight(lightIdx);}
+document.getElementById('light').addEventListener('click',e=>{if(e.target.id==='light') closeLight();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeLight();toggleDrawer(false);mDrawer.classList.remove('open');}});
+</script>
+</body>
+</html>
